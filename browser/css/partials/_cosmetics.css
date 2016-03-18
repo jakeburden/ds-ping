@@ -10,3 +10,7 @@ body {
 .status--up {
   color: #43bb6e;
 }
+
+.status--down {
+  color: #e80044;
+}

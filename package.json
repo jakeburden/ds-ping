@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.3.3",
+    "bytewise": "^1.1.0",
     "cssnano": "^3.5.2",
     "ecstatic": "^1.4.0",
     "hyperstream": "^1.2.2",

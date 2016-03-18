@@ -25,3 +25,31 @@ main {
   margin: 0 auto;
   padding: 16px;
 }
+
+@media (min-width: 36em) {
+  h1 {
+    font-size: 4em;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 6.5em;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 60em) {
+  h1 {
+    font-size: 8.125em;
+    line-height: 130px;
+  }
+}
+
+@media (min-width: 75em) {
+  h1 {
+    font-size: 10.375em;
+    line-height: 154px;
+  }
+}
