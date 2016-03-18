@@ -1,0 +1,12 @@
+a {
+ color: #ff7f07;
+ text-decoration: none;
+}
+
+body {
+  background: #FAFAFA;
+}
+
+.status--up {
+  color: #43bb6e;
+}
