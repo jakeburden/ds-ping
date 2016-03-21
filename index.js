@@ -13,17 +13,10 @@ const db = level('db', {
 
 const storeStatus = require('./server/storeStatus.js')
 const serveIndex = require('./routes/index.js')
-const logsAll = require('./routes/logs/all.js')
-const logsToday = require('./routes/logs/today.js')
-const logsMonth = require('./routes/logs/month.js')
-const logsYear = require('./routes/logs/year.js')
+const serveLogs = require('./routes/logs/index.js')
 
 router.add('GET /', serveIndex(db))
-router.add('GET /logs/all', logsAll(db))
-router.add('GET /logs/today', logsToday(db))
-router.add('GET /logs/month', logsMonth(db))
-router.add('GET /logs/year', logsYear(db))
-
+router.add('GET /logs/{range}', serveLogs(db))
 
 storeStatus(db)
 setInterval(() => storeStatus(db), 120000)
