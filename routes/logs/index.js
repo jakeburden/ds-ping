@@ -6,9 +6,9 @@ module.exports = db => (req, res) => {
     'month': 7,
     'today': 10
   }
-  const year = new Date().toISOString().substring(0, ranges[range])
+  const dateRange = new Date().toISOString().substring(0, ranges[range])
   const log = db.createReadStream({
-    gt: `status!${year}`,
+    gt: `status!${dateRange}`,
     lt: 'status!~'
   })
 
