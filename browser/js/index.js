@@ -18,7 +18,7 @@ function checkStatus() {
 	var result = JSON.parse(this.responseText);
 
 	result.every(function(res) {
-	   if (res.status !== 200) {
+	   if (res.value !== 200) {
 		   soundTheAlarm();
 		   return false;
 	   }
