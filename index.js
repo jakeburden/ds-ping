@@ -11,6 +11,7 @@ const db = level('db', {
   keyEncoding: require('bytewise')
 })
 
+const urls = require('./urls.json')
 const storeStatus = require('./server/storeStatus.js')
 const serveIndex = require('./routes/index.js')
 const serveLogs = require('./routes/logs/index.js')
@@ -18,7 +19,7 @@ const serveLogs = require('./routes/logs/index.js')
 router.add('GET /', serveIndex(db))
 router.add('GET /logs/{range}', serveLogs(db))
 
-storeStatus(db)
+storeStatus(db, urls)
 setInterval(() => storeStatus(db), 120000)
 
 const port = process.argv[2] || 9090

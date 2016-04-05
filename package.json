@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node index.js",
+    "watch": "watchify browser/js/index.js -o browser/dist/bundle.js",
+    "dev": "node index.js && npm start",
+    "build:js": "NODE_ENV=production browserify browser/js/index.js > browser/dist/bundle.js",
     "build:css": "node build/styles",
     "build": "npm run build:css",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,5 +27,9 @@
     "postcss": "^5.0.19",
     "postcss-import": "^8.0.2",
     "uncss": "^0.13.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "watchify": "^3.7.0"
   }
 }
